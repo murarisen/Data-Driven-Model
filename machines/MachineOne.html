@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+
+
+    <title>MachineOne</title>
+
+
+</head>
+
+<body>
+
+  
+        <div class="container">
+            <div class="myCard">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="myLeftCtn">
+                            <form class="myForm">
+                                <header>Enter the values for calculation</header>
+                                <div class="form-group">
+                                    <h6 style="text-align:left;">Enter the value One</h6>
+                                    <input class="myInput" type="number" id="num1" placeholder="data one" id="num1"
+                                        required>
+                                </div>
+
+                                <div class="form-group" style="text-align:left;">
+                                    <h6 style="text-align:left;">Enter the value Two</h6>
+                                    <input class="myInput" placeholder="data two" id="num2" required>
+                                </div>
+                                <div class="form-group">
+                                    <h6 style="text-align:left;">Enter the value Three</h6>
+                                    <input class="myInput" placeholder="data three" id="num3" required>
+                                </div>
+                                <div class="form-group">
+                                    <h6 style="text-align:left;">Enter the value Four</h6>
+                                    <input class="myInput" placeholder="data four" id="num4" required>
+                                </div>
+
+
+
+
+
+                            </form>
+
+                            <button onclick="calculate()" class="butt">Calculate</button>
+                            <br>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="myRightCtn">
+                            <div class="box">
+                                <header>result of your data analysis is here:</header>
+
+                                    <div class="resultdata">
+                                    <h5 id="result1"> </h5>
+                                    </div>
+                                    <div class="resultdata">
+                                    <h5 id="result2"> </h5>
+                                    </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript">
+
+
+            function calculate() {
+
+
+                // Get the values of the two input fields
+                var parameter__one = parseInt(document.getElementById("num1").value);
+                var parameter__two = parseInt(document.getElementById("num2").value);
+                var parameter__three = parseInt(document.getElementById("num3").value);
+                var parameter__four = parseInt(document.getElementById("num4").value);
+
+                // Calculate the sum of the two numbers
+                var result1 = parameter__four + parameter__three + parameter__two + parameter__one;
+                var result2 = parameter__four - parameter__three - parameter__two - parameter__one;
+
+                // Display the result in the HTML
+                document.getElementById("result1").innerHTML = "Result 1: " + result1;
+                document.getElementById("result2").innerHTML = "Result 2: " + result2;
+
+
+            }
+
+
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+<!-- header -->
+<!-- basics -->
+<!-- home -->
+<!-- <div class="container__calculator">
+        <div class="calculation">
+            <label for="num1">Number 1:</label>
+            <input type="number" id="num1">
+            <br>
+            <label for="num2">Number 2:</label>
+            <input type="number" id="num2">
+            <br>
+            <label for="num3">Number 3:</label>
+            <input type="number" id="num3">
+            <br>
+            <label for="num4">Number 4:</label>
+            <input type="number" id="num4">
+            <br>
+            <button onclick="calculate()">Calculate</button>
+            <br>
+            <p id="result"></p>
+
+            <!-- <button onclick="calculate()">Calculate</button>
+            <br>
+            <p id="result"></p> -->
+
+<!-- </div>
+    </div> -->
